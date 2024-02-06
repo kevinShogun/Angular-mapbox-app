@@ -1,0 +1,20 @@
+<div class="w-screen h-screen overflow-hidden" id="map" #map></div>
+
+<ul class="fixed top-28 right-[3%] z-50 bg-zinc-200 rounded-md shadow-md p-3">
+  <li class="ring-1 px-5 rounded-sm bg-transparent hover:bg-blue-400 select-none
+    text-white cursor-pointer transition-all duration-150 ease-linear my-2"
+    *ngFor="let marker of markers; let i = index" [ngStyle]="{backgroundColor: marker.color}"
+    (dblclick)="deleteMarker(i)"
+    (click)="flyTo(marker.marker)"
+    >
+    Marker {{i + 1}}
+  </li>
+
+</ul>
+
+
+
+<button class="fixed bottom-8 right-6 z-50 px-3 pt-1 pb-2 bg-blue-500 rounded-lg
+  font-semibold text-white shadow-lg" (click)="createMarker()">
+  + Agregar marcador
+</button>

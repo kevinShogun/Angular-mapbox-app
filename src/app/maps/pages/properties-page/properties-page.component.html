@@ -1,0 +1,19 @@
+<div class="mt-0 relative w-screen h-screen">
+
+  <h3 class="text-slate-600 absolute top-24 text-3xl font-light left-10">Listado de casas</h3>
+  <div class="bg-slate-300 w-[95%] transform left-1/2 -translate-x-1/2 h-0.5 absolute top-36"></div>
+
+  <div class="w-[95%] transform left-1/2 -translate-x-1/2 absolute top-40
+    grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5
+  ">
+    <div class="ring-1 ring-zinc-500 overflow-hidden rounded-lg pb-3 min-h-80 shadow-xl hover:shadow-orange-300 hover:shadow-md"
+      *ngFor="let house of houses">
+      <map-mini-map [lngLat]="house.lngLat" />
+      <hr />
+      <div class="px-3 pt-1 pb-3">
+        <h4 class="text-lg font-semibold text-zinc-500">{{house.title}}</h4>
+        <h4 class="text-zinc-500">{{house.description}}</h4>
+      </div>
+    </div>
+  </div>
+</div>

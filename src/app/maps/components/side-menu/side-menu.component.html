@@ -1,0 +1,25 @@
+<div class="mx-auto fixed  left-1/2 transform -translate-x-1/2 z-50
+mt-5 mb-3 rounded-lg shadow-lg w-[95%] bg-slate-100 select-none
+px-3 flex items-center justify-between py-4">
+
+  <div class="flex-1 flex ml-3 font-bold font-mono text-slate-400">
+    Kevin García
+  </div>
+
+  <div class="flex gap-10 items-center mr-3">
+
+    <div class="flex items-center text-slate-800 md:text-xl lg:text-2xl cursor-pointer
+      border-0 hover:border-b-2 hover:border-slate-700 pb-1 transition-all ease-linear duration-200"
+      *ngFor="let item of menuItems" [routerLink]="item.route"
+      routerLinkActive="border-b-2 border-slate-700 pb-1"
+      >
+      <i class={{item.icon}}></i>
+      <p class="text-sm md:text-base ml-2">
+        {{item.name}}
+      </p>
+    </div>
+
+
+  </div>
+
+</div>

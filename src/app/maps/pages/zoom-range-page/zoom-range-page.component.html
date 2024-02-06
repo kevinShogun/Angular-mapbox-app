@@ -1,0 +1,23 @@
+<div class="w-screen h-screen overflow-hidden" id="map" #map></div>
+
+
+<div class="fixed select-none bottom-10 left-10 shadow-lg z-50 rounded-lg w-96 bg-gray-200 p-2">
+  <div class="flex items-center w-full justify-center gap-3">
+    <button class="bg-blue-400 px-3 pt-1 pb-2 rounded-md text-center text-white font-bold" (click)="zoomOut()"> -
+    </button>
+
+    <input type="range" class="w-full" min="-2" max="18" [value]="zoom"
+    #zoomInput
+    (input)="zoomChange(zoomInput.value)"
+    />
+    <button class="bg-blue-400 px-3 pt-1 pb-2 rounded-md text-center text-white font-bold" (click)="zoomIn()"> +
+    </button>
+  </div>
+
+  <span class="text-sm font-medium text-gray-600 mt-2">
+    Zoom: {{ zoom | number: '2.2-2' }}
+    <hr />
+    Lng, Lat: {{ currentLnglat }}
+  </span>
+
+</div>
