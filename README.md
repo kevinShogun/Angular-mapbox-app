@@ -2,6 +2,12 @@
 
 Embark on a journey with our Geolocation application powered by Mapbox, Tailwind CSS, and efficient environment variable management. With dynamic maps and sleek design elements, this application brings location-based services to life.
 
+
+
+https://github.com/kevinShogun/Angular-mapbox-app/assets/54457637/df22b07a-dc5e-450b-b4c6-4650c899783a
+
+
+
 ### Key Technologies
 
 - **Mapbox:** Leveraging powerful mapping capabilities for precise geolocation services.
